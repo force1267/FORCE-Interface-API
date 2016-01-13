@@ -30,7 +30,8 @@ New different distance Bar : _makeBar ( _giveWindowPage ( a_Window ) , ' distanc
 
 
 
-!: Hello Bar text added by this page's script and bar.js function "_giveBarPage(bar)"
+
+
 
 !: Bar.js is not complete and has many bugs
 
