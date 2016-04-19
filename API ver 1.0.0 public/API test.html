@@ -1,0 +1,34 @@
+<html>
+<body>
+<input id='nWbtn1' type="button" value='New Window' style="position:absolute;top:20;z-index:1;border-radius:10;background-color:33aa33;font-size:11;width:150px;height:50px" onclick="_makeWindow('header:New Window;resizeable:1')"></input><p style="position:absolute;top:30;left:170">API: _makeWindow( ' header:New Window ; resizeable:1 ' )</p><br>
+<input id='nWbtn2' type="button" value='New fix Window' style="position:absolute;top:70;z-index:1;border-radius:10;background-color:33aa33;font-size:11;width:150px;height:50px" onclick="_makeWindow('header:New fix Window;resizeable:0')"></input><p style="position:absolute;top:80;left:170">API: _makeWindow( ' header:New fix Window ; resizeable:0 ' )</p><br>
+<input id='nWbtn3' type="button" value='New no close Window' style="position:absolute;top:120;z-index:1;border-radius:10;background-color:33aa33;font-size:11;width:150px;height:50px" onclick="_makeWindow('header:New no close Window;resizeable:1;no_exit:1')"></input><p style="position:absolute;top:130;left:170">API: _makeWindow( ' header:New no close Window ; resizeable:1 ; no_exit:1 ' )</p><br>
+<input id='nWbtn4' type="button" value='New no header Window' style="position:absolute;top:170;z-index:1;border-radius:10;background-color:33aa33;font-size:11;width:150px;height:50px" onclick="_makeWindow('resizable:1')"></input><p style="position:absolute;top:180;left:170">API: _makeWindow('resizable:1')</p><br>
+<input id='nWbtn5' type="button" value='New different x Window' style="position:absolute;top:220;z-index:1;border-radius:10;background-color:33aa33;font-size:11;width:150px;height:50px" onclick="_makeWindow('header:New different x Window;resizeable:1;min_x:200;max_x:500')"></input><p style="position:absolute;top:230;left:170">API: _makeWindow( ' header:New different x Window ; resizeable:1 ; min_x:200 ; max_x:500 ' )</p><br>
+<input id='nWbtn6' type="button" value='New different y Window' style="position:absolute;top:270;z-index:1;border-radius:10;background-color:33aa33;font-size:11;width:150px;height:50px" onclick="_makeWindow('header:New different y Window;resizeable:1;min_y:200;max_y:500')"></input><p style="position:absolute;top:280;left:170">API: _makeWindow( ' header:New different y Window ; resizeable:1 ; min_y:200 ; max_y:500 ' )</p><br>
+<input id='nBbtn1' type="button" value='New Bar' style="position:absolute;top:320;z-index:1;border-radius:10;background-color:3333aa;font-size:11;width:150px;height:50px" onclick="_makeBar(_giveWindowPage(lastWindow),'').page.appendChild(p=document.createElement('p'));p.innerHTML='Hello Bar !';p.style.margin=0;"></input><p style="position:absolute;top:330;left:170">API: _makeBar ( _giveWindowPage ( lastWindow ) , ' ' )</p><br>
+<input id='nBbtn2' type="button" value='New left side Bar' style="position:absolute;top:370;z-index:1;border-radius:10;background-color:3333aa;font-size:11;width:150px;height:50px" onclick="_makeBar(_giveWindowPage(lastWindow),'side:left').page.appendChild(p=document.createElement('p'));p.innerHTML='Hello Bar !';p.style.margin=0;"></input><p style="position:absolute;top:380;left:170">API: _makeBar ( _giveWindowPage ( lastWindow ) , ' side : left ' )</p><br>
+<input id='nBbtn3' type="button" value='New upLimited Bar' style="position:absolute;top:420;z-index:1;border-radius:10;background-color:3333aa;font-size:11;width:150px;height:50px" onclick="_makeBar(_giveWindowPage(lastWindow),'upLimit:10').page.appendChild(p=document.createElement('p'));p.innerHTML='Hello Bar !';p.style.margin=0;"></input><p style="position:absolute;top:430;left:170">API: _makeBar ( _giveWindowPage ( lastWindow ) , ' upLimit : 10 ' )</p><br>
+<input id='nBbtn4' type="button" value='New colored Bar' style="position:absolute;top:470;z-index:1;border-radius:10;background-color:3333aa;font-size:11;width:150px;height:50px" onclick="_makeBar(_giveWindowPage(lastWindow),'color:green').page.appendChild(p=document.createElement('p'));p.innerHTML='Hello Bar !';p.style.margin=0;"></input><p style="position:absolute;top:480;left:170">API: _makeBar ( _giveWindowPage ( lastWindow ) , ' color : green ' )</p><br>
+<input id='nBbtn5' type="button" value='New different distance Bar' style="position:absolute;top:520;z-index:1;border-radius:10;background-color:3333aa;font-size:11;width:150px;height:50px" onclick="_makeWindow('header:Alert!;resizeable:0;min_x:200;max_x:400;min_y:100;max_y:190').page.appendChild(p=document.createElement('p'));p.innerHTML='This setting is not ready yet!<br>I am working on it<br>and it will be ready soon!';p.style.margin=0;p.style.color='green';"></input><p style="position:absolute;top:530;left:170">API: _makeBar ( _giveWindowPage ( lastWindow ) , ' distance : 20 ' )</p><br>
+<div style="margin=0;overflow=auto;position:absolute;top:450;left:800;width:500;height:110">
+<p style="color:green;font-size:12;margin:0">API make Window : window = _makeWindow ( ' windowSettings ' )</p><br>
+<p style="color:green;font-size:12;margin:0">API make Bar : bar = _makeBar ( parent , ' barSettings ' )</p><br>
+<p style="color:purple;font-size:12;margin:0">!: lastWindow variable defined on this page's script</p><br>
+<p style="color:purple;font-size:12;margin:0">!: Hello Bar text added by this page's script and bar.js function "_giveBarPage(bar)"</p><br>
+<p style="color:red;font-size:12;margin:0">!: Bar.js is not complete and has many bugs</p><br>
+<p style="color:brown;font-size:12;margin:0">Force Interface API by "Force". teeforce1267@yahoo.com</p>
+</div>
+<script src="Engine.js"></script>
+<script src="window.js"></script>
+<script src="bar.js"></script>
+<script>
+_giveBarPage(_makeBar(_giveWindowPage(_makeWindow('header:Window')),'size:50')).appendChild(p=document.createElement('p'));
+p.innerHTML='It works!';
+var lastWindow = FI_all_window[0];
+function select_lastWindow(){for(i=0;i<=FI_all_window.length-1;i++)if(FI_all_window[i].isActive==1)lastWindow=FI_all_window[i]}
+if(document.addEventListener)document.addEventListener("click",select_lastWindow,false);
+else document.attachEvent("onclick",select_lastWindow);
+</script>
+</body>
+</html>
